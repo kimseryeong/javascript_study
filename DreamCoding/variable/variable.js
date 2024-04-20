@@ -3,7 +3,7 @@
 // 바닐라 자바스크립트에서 사용
 'use strict';
 
-// 2. Variable
+// 2. Variable, rw(read/write) - 메모리에 읽고 쓰기 가능
 // let (added in ES6) - mutable type
 let globalName = 'global name';
 {
@@ -29,7 +29,7 @@ var age;
 }
 console.log(age); //5
 
-// 3. Contants
+// 3. Contants, r(read only)
 // const - immutable type
 // 한번 할당하면 절대 값이 바뀌지 않는 것
 // - 보안상 이유
@@ -82,7 +82,7 @@ console.log(`value: ${symbol1.description}, type: ${typeof symbol1}`);
 
 //object
 const serong = {name: 'seryeong', age: 26};
-serong.age = 25;
+serong.age = 25; // serong object 자체는 변경이 불가
 
 //5. Dynamic typing : dynamically typed language
 //프로그램이 동작할 때 데이터 타입이 변경될 수 있음
