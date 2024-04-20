@@ -4,9 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="async/callback.js" defer></script>
+    <script defer src="main.js"></script>
+    <!-- 
+        defer 가 가장 좋은 방법
+        HTML parsing 중 js를 실행하도록 명령(다운), parsing 후 js 실행
+        정의한 순서대로 js가 실행됨    
+    -->
+
+    <!-- <script async src="main.js"></script> -->
+    <!-- parsing이 병렬적으로 일어남
+        - js를 다운로드 받는 시간 절약
+        - querySelector를 이용해서 DOM을 조작할 때, 우리가 원하는 HTML 요소가 정의되어 있지 않을 수 있음
+        - 다운로드 받는 순서에 따라 js 파일이 실행되기 때문에 선언 순서와 상관없이 실행됨
+            (js가 서로 의존적인 상황이라면 실행 시 문제가 발생할 수 있음)
+    -->
+
+    <!-- <script src="main.js"></script>  -->
+    <!-- header 에서의 script 선언 
+         - html을 parsing 하면서 실행됨.
+         - 용량이 큰 파일의 경우 많은 시간이 소요되어 로딩이 길어짐    
+    -->
 </head>
 <body>
     
+
+
+    <!-- <script src="main.js"></script>  -->
+    <!-- 
+        body 끝에서의 script 선언 
+         - html의 parsing 이 끝난 후 실행됨 
+         - 사용자가 HTML을 빠르게 볼 수 있음
+         - 사용자가 의미있는 컨텐츠를 보기 위해 자바스크립트를 통해 서버에서 데이터 받아오거나 DOM을 꾸며주는 경우
+            더 오래 기다려야 함
+    -->
 </body>
 </html>
