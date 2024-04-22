@@ -168,8 +168,32 @@ function calc(command, a, b) {
     }
     else{
         result = 'error!!';
+        //throw Error('error !! unknown command !');
     }
     console.log(`result: ${result}`);
     return result;
 }
 calc('+', 2, 5);
+calc('//', 2, 6);
+
+// 퀴즈 드림코딩 ellie 코드
+// 정해진 데이터를 처리하는 경우는 if문 보다 switch 가 더 좋음 !
+function calculate_ellie(command, a, b){
+    switch (command){
+        case 'add':
+            return a + b;
+        case 'substract':
+            return a - b;
+        case 'divide':
+            return a / b;
+        case 'multiple':
+            return a * b;
+        case 'remainder':
+            return a % b;
+        default:
+            throw Error('unknown command');
+    }
+}
+
+let calcRes1 = calculate_ellie('add', 2, 6);
+console.log(`ellie calculate 결과 : ${calcRes1}`);
