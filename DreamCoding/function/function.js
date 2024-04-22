@@ -151,25 +151,25 @@ const add2 = (a, b) => {
 function calc(command, a, b) {
     let result = 0;
 
-    if(command == '+'){
+    if(command === '+'){
         result = a + b;
     }
-    else if(command == '-'){
+    else if(command === '-'){
         result = a - b;
     }
-    else if(command == '/'){
+    else if(command === '/'){
         result = a / b;
     }
-    else if(command == '*'){
+    else if(command === '*'){
         result = a * b;
     }
-    else if(command == '%'){
+    else if(command === '%'){
         result = a % b;
     }
     else{
         result = 'error!!';
     }
+    console.log(`result: ${result}`);
     return result;
 }
-
 calc('+', 2, 5);
