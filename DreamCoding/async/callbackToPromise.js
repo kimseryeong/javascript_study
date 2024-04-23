@@ -4,7 +4,6 @@
  */
 
 //Callback Hell example (콜백지옥)
-//콜백지옥 함수 -> 디버깅, 유지보수 어려움 !!
 class UserStorage{
     loginUser(id, password){
     // loginUser(id, password, onSuccess, onError){
@@ -25,7 +24,6 @@ class UserStorage{
         })
     }
 
-
     // getRoles(user, onSuccess, onError){
     getRoles(user){
         return new Promise((resolve, reject)=>{
@@ -43,13 +41,13 @@ class UserStorage{
     }
 }
 
-
 const userStorage = new UserStorage();
 const id = prompt('enter your id');
 const password = prompt('enter your password');
 
-
-// 콜백지옥 함수 -> Promise
+/**
+ * 콜백지옥 함수 -> Promise
+ */
 userStorage.loginUser(id, password)
     .then(userStorage.getRoles)
     .then(user => alert(
@@ -58,8 +56,7 @@ userStorage.loginUser(id, password)
     .catch(error => console.log(error))
 
 
-
-
+//기존 콜백 함수
 // userStorage.loginUser(
 //     id
 //     , password
@@ -77,36 +74,3 @@ userStorage.loginUser(id, password)
 //     }
 //     , error => {console.log(error)}
 // )
-
-
-
-/**
- * 생각해보기
- 
-const userLogin = (id, password) => {
-    return new Promise((resolve, reject) => {
-        setTimeout(()=>{
-            resolve(
-                (id === 'serong' && password === 'sr')  || 
-                (id === 'ellie' && password === 'el') 
-            )
-            reject(
-                new Error('Not !!! ')
-            )
-        }, 1000)
-    })
-};
-
-const userGetRole = () => {
-    
-}
-
-userLogin()
-    .then(
-        alert(`Hi ${id} ~~ You can access from now !`)
-    )
-    .catch(
-        error => console.log(error)
-    )
-
-*/
