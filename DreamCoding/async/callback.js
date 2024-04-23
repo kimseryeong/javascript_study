@@ -4,22 +4,24 @@
  * 
  */
 
-console.log('1');
-setTimeout(() => console.log('2'), 1000); 
-console.log('3');
+console.log('1'); //1st
+setTimeout(() => console.log('2'), 1000); //1초 후 코드 실행 //4th
+console.log('3'); //2nd
 
 // Synchrounous Callback
 function printImmediately(print){
     //hoisting에 의해 함수선언은 제일 먼저 실행됨
     print();
 }
-printImmediately(() => console.log('hello'));
+printImmediately(() => console.log('hello')); //3rd
 
 // Asynchrounous Callback
 function printWithDelay(print, timeout){
     setTimeout(print, timeout);
 }
-printWithDelay(() => console.log('async callback'), 2000);
+printWithDelay(() => console.log('async callback'), 2000); //5th
+
+
 
 //Callback Hell example (콜백지옥)
 //콜백지옥 함수 -> 디버깅, 유지보수 어려움 !!
@@ -70,4 +72,5 @@ userStorage.loginUser(
                 console.log(error);
             })
     }
-    , error => {console.log(error)})
+    , error => {console.log(error)}
+)
