@@ -1,7 +1,7 @@
 'use strict';
 
 /**
- * Object
+ * [Object]
  * one of the Javascript's data types.
  * a collection of related data and/or functionality.
  * 대부분의 자바스크립트 object 들은 Object 클래스의 인스턴스임.
@@ -25,10 +25,10 @@ print(serong);
 const obj1 = {}; //'obejct literal' syntax
 const obj2 = new Object(); // 'object constructor' syntax
 
-obj1.add1 = true; // 동적으로 추가 가능 -> 추천하는 방법은 아님 !
+obj1.add1 = true; // 동적으로 속성 추가 가능 -> 추천하는 방법은 아님 !
 console.log(obj1.add1);
 
-delete serong.age; // 동적으로 삭제 가능 (undefined 출력)
+delete serong.age; // 동적으로 값 삭제 가능 (undefined 출력)
 print(serong);
 
 
@@ -54,13 +54,13 @@ function makePerson(name, age){
     }
 }
 const person4 = makePerson('ellie', 30);
-
+console.log(person4);
 
 // 4. Constructor function
 //object 함수 
 // - 함수명 대문자 시작
 // - return 대신 this.변수 사용
-// - new 사용하여 
+// - new 사용하여 호출
 function Person(name, age){
     this.name = name;
     this.age = age;
@@ -90,17 +90,17 @@ for (let value of array){
 }
 
 
-// 6. Cloning
+// 7. Cloning
 const user = { name: 'serong', age: 25}; // 메모리 할당 (ref)
 const user2 = user; //user에 할당된 ref 가 동일하게 할당됨
+console.log(user);
 
 // 따라서 user 를 참조하고 있는 user2의 값을 변경하면 user의 값도 같이 변경됨.
 user2.name = 'coder';
 console.log(user);
 
 // 참조하는 user 값이 변경되지 않도록 하는 방법
-
-//old way
+//old way : 빈 object 생성 후 object[key] 에 참조하고 싶은 object[key] 삽입
 const user3 = {};
 for (let key in user){
     user3[key] = user[key];
@@ -109,7 +109,7 @@ console.log(user3);
 user3.name = 'serong';
 console.log(user3);
 
-// assign
+// assign({}, 참조하고 싶은 object)
 const user4 = Object.assign({}, user);
 console.log(user4);
 
@@ -119,4 +119,4 @@ const fruit1 = {color: 'red'};
 const fruit2 = {color: 'blue', size: 'big'};
 const mixed = Object.assign({}, fruit1, fruit2);
 console.log(mixed.color); //blue
-console.log(mixed.mixed); //big
+console.log(mixed.size); //big
