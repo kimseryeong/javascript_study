@@ -15,7 +15,8 @@ function fnLogoBtn(){
  * 티셔츠 클릭 -> 서버에서 티셔츠에 해당하는 데이터 받아오기
  */
 
-function getAllClothes(item){
-    //데이터 받아오기
 
+function fnViewTshirt(){
+    //데이터 받아오기
+    console.log('티셔츠 데이터 받아오기');
 }
