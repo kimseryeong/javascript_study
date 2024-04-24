@@ -17,30 +17,34 @@ function changeName(obj){
 
 const ellie = {name: 'ellie'};
 console.log(ellie);
+
 changeName(ellie);
 console.log(ellie);
 
+
 // 3. Default parameters (added in ES6)
-function showMessage(message, from = 'unknown'){
+function showMessage(message, from = 'unknown'){ //변수의 초기값 설정해줄 수 있음
     console.log(`${message} by ${from}`);
 }
 
 showMessage('Hi!');
+showMessage('Hi!', 'serong');
+
 
 // 4. Rest parameters (added in ES6)
 function printAll(...args){ //배열
     for(let i = 0; i < args.length; i++){
-        console.log(args[i]);
+        console.log(`for문 기본형 >> ${i} : ${args[i]}`);
     }
-
+    
     for(const arg of args){
-        console.log(arg);
+        console.log(`for문 of형 >> ${arg}`);
     }
 
-    args.forEach((arg) => console.log(arg));
+    args.forEach((arg) => console.log(`for문 forEach형 >> ${arg}`));
 }
-
 printAll('dream', 'coding', 'ellie');
+
 
 // 5. Local scope
 let globalMessage = 'global';
@@ -49,6 +53,7 @@ function printMessage(){
     console.log(message);
     console.log(globalMessage);
 
+    printAnother();
     function printAnother(){
         console.log(message);
         let childMessage = 'hello';
@@ -62,8 +67,10 @@ printMessage();
 function sum(a, b){
     return a + b;
 }
-const result = sum(1, 2); // 3
 console.log(`sum: ${sum(1, 2)}`);
+const result = sum(1, 2);
+console.log(`sum: ${result}`);
+
 
 // 7. Early return, early exit
 // bad
@@ -103,6 +110,7 @@ printAgain();
 
 const sumAgain = sum;
 console.log(sumAgain(1, 3));
+
 
 // 2. Callback function using function expression
 function randomQuiz(answer, printYes, printNo){
@@ -176,7 +184,7 @@ function calc(command, a, b) {
 calc('+', 2, 5);
 calc('//', 2, 6);
 
-// 퀴즈 드림코딩 ellie 코드
+// 드림코딩 ellie 코드
 // 정해진 데이터를 처리하는 경우는 if문 보다 switch 가 더 좋음 !
 function calculate_ellie(command, a, b){
     switch (command){
@@ -197,3 +205,4 @@ function calculate_ellie(command, a, b){
 
 let calcRes1 = calculate_ellie('add', 2, 6);
 console.log(`ellie calculate 결과 : ${calcRes1}`);
+console.log(calculate_ellie('ad', 5, 8));

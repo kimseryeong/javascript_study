@@ -6,9 +6,9 @@
     <title>Document</title>
     <script defer src="main.js"></script>
     <!-- 
-        defer 가 가장 좋은 방법
-        HTML parsing 중 js를 실행하도록 명령(다운), parsing 후 js 실행
-        정의한 순서대로 js가 실행됨    
+        * defer 가 가장 좋은 방법 * 
+        HTML parsing 중 js를 실행하도록 명령(다운), parsing 후 js 한번에 실행
+        => 정의한 순서대로 js가 실행됨    
     -->
 
     <!-- <script async src="main.js"></script> -->
@@ -34,8 +34,8 @@
         body 끝에서의 script 선언 
          - html의 parsing 이 끝난 후 실행됨 
          - 사용자가 HTML을 빠르게 볼 수 있음
-         - 사용자가 의미있는 컨텐츠를 보기 위해 자바스크립트를 통해 서버에서 데이터 받아오거나 DOM을 꾸며주는 경우
-            더 오래 기다려야 함
+         - 사용자가 의미있는 컨텐츠를 보기 위해 자바스크립트를 통해 
+           서버에서 데이터 받아오거나 DOM을 꾸며주는 경우 더 오래 기다려야 함
     -->
 </body>
 </html>
