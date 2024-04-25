@@ -82,6 +82,9 @@ function setEventListeners(data){
     //event 를 통해 어떤 event인지 알 수 있음
     logo.addEventListener('click', () => displayItems(data));
     buttons.addEventListener('click', event => onButtonClick(event, data));
+    //addEventListener() 는 광범위하게 설정 XX
+    //내가 event를 주고 싶은 container 단위로 설정해주는 것이 좋음
+    //성능차이발생
 }
 
 //버튼 클릭 이벤트 함수
