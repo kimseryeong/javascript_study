@@ -6,6 +6,7 @@
     <title>Online Shopping</title>
     <link rel="stylesheet" href="style.css" />
     <script src="src/main.js" defer></script>
+    <!-- <script src="data/data.json" type="text/javascript"></script> -->
   </head>
   <body>
     <!-- <div class="content"> -->
@@ -15,25 +16,25 @@
   
 
       <section class="buttons">
-        <button class="btn tshirt" onclick="fnViewTshirt()">
-          <img src="img/pink_t.png" alt="tshirt" class="imgBtn">
+        <button class="btn tshirt">
+          <img src="img/pink_t.png" alt="tshirt" class="imgBtn" data-key="type" data-value="tshirt">
         </button>
         <button class="btn skirt">
-          <img src="img/pink_s.png" alt="skirt" class="imgBtn">
+          <img src="img/pink_s.png" alt="skirt" class="imgBtn" data-key="type" data-value="skirt">
         </button>
         <button class="btn pants">
-          <img src="img/pink_p.png" alt="pants" class="imgBtn">
+          <img src="img/pink_p.png" alt="pants" class="imgBtn" data-key="type" data-value="pants">
         </button>
-        <button class="btn textBtn pink">Pink</button>
-        <button class="btn textBtn yellow">Yellow</button>
-        <button class="btn textBtn blue">Blue</button>
+        <button class="btn textBtn pink" data-key="color" data-value="pink">Pink</button>
+        <button class="btn textBtn yellow" data-key="color" data-value="yellow">Yellow</button>
+        <button class="btn textBtn blue" data-key="color" data-value="blue">Blue</button>
       </section>
   
       <ul class="items">
-        <li class="item">
+        <!-- <li class="item">
           <img src="img/blue_p.png" alt="blue_p" class="itemThumbnail">
           <span class="itemDescription">female, small</span>
-        </li>
+        </li> -->
       </ul>
     <!-- </div> -->
 

@@ -108,3 +108,7 @@ button{
   margin-left: var(--base-space);
   font-size: var(--font-size);
 }
+
+.invisible{
+  display: none;
+}
