@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array</title>
+    <script defer src="main.js"></script>
+    <script defer src="study1.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+        <!-- map, filter, reduce 활용하여 요소 출력 -->
+        <h3 class="txtCenter">1. map, filter, reduce 활용하여 array 요소 출력</h3>
+        <p class="title txtCenter">array 요소 : ['🍎', '🍉', '🍇', '🥝', '🍑']</p>
+        <p class="title">map() : 각 요소 2개씩 출력</p>
+        <div class="map"></div>
+        <p class="title">filter() : '🍉', '🍎' 가 아닌 요소 출력</p>
+        <div class="filter"></div>
+        <p class="title">reduce() : 모든 요소 출력</p>
+        <div class="reduce"></div>
+    </div>
+    
+    <!-- class 배열 생성 후 요소 출력 -->
+    <div class="final">
+        <h3 class="txtCenter">2. Class에 items 배열 생성 후 버튼 이벤트 동작으로 DOM 조작하기</h3>
+        <section class="buttons">
+            <button class="btn" data-key="color" data-value="all">all</button>
+            <button class="btn" data-key="color" data-value="green">green</button>
+            <button class="btn" data-key="color" data-value="yellow">yellow</button>
+            <button class="btn" data-key="color" data-value="red">red</button>
+        </section>
+            <div class="study1"></div>
+    </div>
+</body>
+</html>
