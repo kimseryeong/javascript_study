@@ -155,19 +155,7 @@ function createStudy2(event, items){
         return;
     }
     
-    study2.innerHTML = items.filter((val) => val[key] === value).map((val) => createHtml(val.emoji)).join('');
+    study2.innerHTML = items.filter((val) => val[key] === value)
+                            .map((val) => createHtml(val.emoji)).join('');
 }
-
-
-// type이 bread인 요소만 
-// container.innerHTML = something
-//     .filter((val) => val.type === 'bread')
-//     .map((val) => createHtml(val.emoji)).join('');
-
-// color가 green인 요소만
-// container.innerHTML = something
-//     .filter((val) => val.color === 'green')
-//     .map((val) => createHtml(val.emoji)).join('');
-
-
 
