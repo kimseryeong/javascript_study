@@ -4,14 +4,23 @@
 
 
 <h3> 📂 Dreamcoding </h3>
--  출처 : Youtube 드림코딩
+
+- 출처 : Youtube 드림코딩
 
 ***
-***
 
 
+<h3> 📂 ES6 </h3>
+
+- ECMAScript 6 공부하기
+- map, filter, reduce 익숙해지기
+
+
+
+<!--
 <h4>📌 서버 통신 </h4>
 
+**fetch API, Ajax**
 
 **JSON** (JavaScript Object Notation) 
 - 서버와의 통신을 위한 데이터 포맷
@@ -31,3 +40,4 @@ JSON.stringify('object')
 ``` 
 JSON.parse({json}) 
 ```
+!-->
