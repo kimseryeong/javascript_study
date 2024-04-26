@@ -18,12 +18,12 @@ button{
     border: 5px solid lightblue;
     /* background-color: lightblue; */
 }
-.final{
+.study{
     margin-top: 30px;
     border: 5px solid rgb(255, 184, 210);
     /* background-color: rgb(255, 184, 210); */
 }
-.main, .final{
+.main, .study{
     padding: 20px;
 }
     
@@ -34,14 +34,14 @@ button{
     font-size: var(--font-size);
     margin: 30px 0 5px 0;
 }
-.map, .filter, .reduce, .study1, .buttons{
+.map, .filter, .reduce, .study1, .study2, .buttons{
     display: flex;
 }
 .map, .filter, .reduce{
     background-color: #fff;
 }
 
-.study1{
+.study1, .study2{
     background-color: #ffd3da;
 }
 .element{

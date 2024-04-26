@@ -1,54 +1,58 @@
 {
-    "type":"fruit"
-    ,"color":"red"
-    ,"emoji":"🍎"
-    ,"name":"apple"
-}
-,{
-    "type":"fruit"
-    ,"color":"green"
-    ,"emoji":"🥝"
-    ,"name":"kiwi"
-}
-,{
-    "type":"fruit"
-    ,"color":"yellow"
-    ,"emoji":"🥭"
-    ,"name":"mango"
-}
-,{
-    "type":"bread"
-    ,"color":"yellow"
-    ,"emoji":"🥐"
-    ,"name":"salt bread"
-}
-,{
-    "type":"bread"
-    ,"color":"yellow"
-    ,"emoji":"🥯"
-    ,"name":"bagle"
-}
-,{
-    "type":"cook"
-    ,"color":"green"
-    ,"emoji":"🥗"
-    ,"name":"salad"
-}
-,{
-    "type":"plant"
-    ,"color":"green"
-    ,"emoji":"🌳"
-    ,"name":"tree"
-}
-,{
-    "type":"plant"
-    ,"color":"green"
-    ,"emoji":"☘️"
-    ,"name":"clover"
-}
-,{
-    "type":"cook"
-    ,"color":"red"
-    ,"emoji":"🍣"
-    ,"name":"sushi"
+    "items" : [
+        {
+            "type":"fruit"
+            ,"color":"red"
+            ,"emoji":"🍎"
+            ,"name":"apple"
+        }
+        ,{
+            "type":"fruit"
+            ,"color":"green"
+            ,"emoji":"🥝"
+            ,"name":"kiwi"
+        }
+        ,{
+            "type":"fruit"
+            ,"color":"yellow"
+            ,"emoji":"🥭"
+            ,"name":"mango"
+        }
+        ,{
+            "type":"bread"
+            ,"color":"yellow"
+            ,"emoji":"🥐"
+            ,"name":"salt bread"
+        }
+        ,{
+            "type":"bread"
+            ,"color":"yellow"
+            ,"emoji":"🥯"
+            ,"name":"bagle"
+        }
+        ,{
+            "type":"cook"
+            ,"color":"green"
+            ,"emoji":"🥗"
+            ,"name":"salad"
+        }
+        ,{
+            "type":"plant"
+            ,"color":"green"
+            ,"emoji":"🌳"
+            ,"name":"tree"
+        }
+        ,{
+            "type":"plant"
+            ,"color":"green"
+            ,"emoji":"☘️"
+            ,"name":"clover"
+        }
+        ,{
+            "type":"cook"
+            ,"color":"red"
+            ,"emoji":"🍣"
+            ,"name":"sushi"
+        }
+    ]
 }
