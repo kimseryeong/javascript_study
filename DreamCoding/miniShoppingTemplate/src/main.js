@@ -57,7 +57,7 @@ function displayItems(data){
     //map()을 사용해서 간편하게 li 태그들을 만들어주기
     const container = document.querySelector('.items');
     container.innerHTML = data.map(item => createHTMLString(item)).join('');
-    
+    //join()을 통해 생성된 html 태그들 string으로 묶어주기
 
 }
 
