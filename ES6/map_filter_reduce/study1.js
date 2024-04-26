@@ -57,6 +57,12 @@ class Items{
                 ,'emoji':'☘️'
                 ,'name':'clover'
             }
+            ,{
+                'type':'cook'
+                ,'color':'red'
+                ,'emoji':'🍣'
+                ,'name':'sushi'
+            }
         ]
 
     }
@@ -68,37 +74,35 @@ const container = document.querySelector('.study1');
 
 showAllItems();
 
-document.querySelector('.buttons').addEventListener('click', (e) => {
-    showTargetItem(e, something);
-})
-
 //모든 아이템 출력 함수
 function showAllItems(){
     container.innerHTML = something.map((val) => createHtml(val.emoji)).join('')
 }
 
+//버튼 클릭 이벤트
+document.querySelector('.buttons').addEventListener('click', (e) => {
+    showTargetItem(e);
+})
+
 //버튼 클릭 시 타겟 아이템 출력 함수
 function showTargetItem(event){
-    // console.log(event.target);
-    // console.log(event.target.dataset.key);
-    // console.log(event.target.dataset.value);
 
     const key = event.target.dataset.key;
     const value = event.target.dataset.value;
 
-    console.log(key);
-    console.log(value);
+    console.log(`${key} : ${value}`);
 
-    domCreate(key, value, something);
+    domCreate(key, value);
 }
 
 //Dom 조작 함수
-function domCreate(key, value, items){
+function domCreate(key, value){
     if(value === 'all'){
         showAllItems();
+        return;
     }
 
-    container.innerHTML = items
+    container.innerHTML = something
             .filter( (val) => val[key] === value )
             .map((val) => createHtml(val.emoji)).join('')
 }
