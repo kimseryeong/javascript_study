@@ -17,12 +17,3 @@
 
 - 배열 각 요소에 대해 주어진 reducer 함수 실행 후, 하나의 결과값 반환하는 메서드
 - `array.reduce((previousValue, currentValue, currentIndex, array) => 로직);`
-
-<br>
-<br>
-
-<h2>간단한 복습</h2>
-
-1. map, filter, reduce 활용하여 array 요소 출력하기 (main.js)
-
-2. Class에 items 배열 생성 후 버튼 이벤트 동작으로 DOM 조작하기 (study1.js)
