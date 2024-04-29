@@ -1,0 +1,32 @@
+:root{
+    --size: 20px;
+}
+
+.container{
+    display: flex;
+    margin: var(--size);
+    /* height: 91vh; */
+}
+
+.image{
+    width: 60%;
+    height: 100%;
+}
+.image img{
+    width: 100%;
+    height: 100%;
+}
+.description{
+    width: 40%;
+    border: 2px solid lightblue;
+    border-radius: var(--size);
+    margin-left: var(--size);
+    padding: var(--size);
+}
+.title{
+    display: flex;
+    align-items: center;
+}
+.left{
+    padding-left: calc(var(--size) * 2);
+}
