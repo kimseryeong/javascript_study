@@ -1,32 +1,57 @@
 :root{
     --size: 20px;
 }
-
+button{
+    border: none;
+    background-color: transparent;
+}
 .container{
     display: flex;
-    margin: var(--size);
-    /* height: 91vh; */
+    margin: calc(var(--size)*2);
 }
+.contents{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.contents-left{
+    text-align: center;
 
+}
 .image{
-    width: 60%;
-    height: 100%;
+    width: 250px;
 }
 .image img{
+    align-items: center;
     width: 100%;
-    height: 100%;
 }
 .description{
     width: 40%;
-    border: 2px solid lightblue;
+    border: 2px solid blanchedalmond;
     border-radius: var(--size);
     margin-left: var(--size);
     padding: var(--size);
 }
-.title{
+.description p{
+    line-height: 2.2;
+}
+.intro{
     display: flex;
     align-items: center;
 }
 .left{
-    padding-left: calc(var(--size) * 2);
+    margin: 0 0 0 auto;
+    padding-right: calc(var(--size) * 2);
+}
+.changeCatBtn{
+    background-color: blanchedalmond;
+    border-radius: var(--size);
+    margin-top: var(--size);
+    padding: calc(var(--size) / 2) var(--size);
+    font-weight: 600;
+}
+.changeCatBtn:hover{
+    scale: (1.1);
+    box-shadow: 1px 1px 1px rgb(255, 153, 0);
+    cursor: pointer;
 }
