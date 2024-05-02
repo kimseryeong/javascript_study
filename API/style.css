@@ -16,10 +16,12 @@ button{
 }
 .contents-left{
     text-align: center;
-
+    border: 2px solid blanchedalmond;
+    border-radius: var(--size);
+    padding: var(--size);
 }
 .image{
-    width: 250px;
+    width: 400px;
 }
 .image img{
     align-items: center;
@@ -27,10 +29,7 @@ button{
 }
 .description{
     width: 40%;
-    border: 2px solid blanchedalmond;
-    border-radius: var(--size);
     margin-left: var(--size);
-    padding: var(--size);
 }
 .description p{
     line-height: 2.2;
