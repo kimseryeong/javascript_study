@@ -1,23 +1,3 @@
-/** 출처 : 모던 자바스크립트 Deep Dive - 이웅모 */
-
-/** 
- * Class Hoisting(호이스팅) - (let, const 키워드로 선언한 변수처럼 호이스팅됨)
-*  
-*    함수와 같이 소스코드 런타임 이전에 먼저 평가되어 함수 객체를 생성함.
-*    이때 생성된 함수 객체 === 생성자 함수 (constructor)
-*    class는 클래스 정의 이전에 참조할 수 없음 !
-* 
-*/
-
-//Error발생 !! (Uncaught ReferenceError: Cannot access 'Test' before initialization)
-//const test2 = new Test(); 
-//console.log(test2); 
-
-class HoistingTest{}
-
-const hostingTest = new HoistingTest(); //정상
-console.log(hostingTest);
-
 
 /**
  * Class Method(메서드)
@@ -55,6 +35,7 @@ class ConstructorMethodTest2{
 }
 const constructorMethodTest2 = new ConstructorMethodTest2();
 console.log(constructorMethodTest2);
+
 
 
 /** 2. 프로토타입 Method 
@@ -183,41 +164,3 @@ console.log(Number.isNaN(NaN));
 console.log(JSON.stringify({a: 1}));
 console.log(Object.is({}, {}));
 console.log(Reflect.has({a: 1}, 'a'));
-
-
-/**
- * Class Property
- * 
- * 인스턴스 프로퍼티 : constructor 내부에서 정의 
- * 
- */
-
-class Drink{
-    constructor(name){
-        this.name = name; //인스턴스 프로퍼티 (public)
-    }
-}
-
-const drink = new Drink('coffee');
-console.log(drink); //Drink {name: "coffee"}
-console.log(drink.name); //coffee
-
-const drink_ = {
-    
-    //데이터 프로퍼티
-    type: 'Coffee',
-    color: 'Brown',
-
-    //getter 함수
-    get info(){
-        return `${this.type} is ${this.color} color :>`;
-    }
-
-    //setter 함수
-    ,set info(text){
-        [this.type, this.color] = text.split(' ');
-    }
-};
-
-drink_.info = 'Milk Brown';
-console.log(drink_);
