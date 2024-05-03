@@ -19,7 +19,7 @@ class Animal{
     move() { return 'move'; }
 
     static sayHi(){
-        return 'HI !';
+        return 'HI :>';
     }
 }
 
@@ -78,11 +78,13 @@ class Rectangle{
 //서브클래스
 class ColorRectangle extends Rectangle{
     constructor(width, height, color){
-        super(width, height); //슈퍼클래스의 생성자 가져오기 (생략하면 super에서 정의된 인스턴스는 삭제됨)
-        this.color = color; //서브클래스의 생성자 추가
-    
+        //슈퍼클래스의 생성자 가져오기 (생략하면 super에서 정의된 인스턴스는 삭제됨)
+        super(width, height);
+
         //super가 반환한 인스턴스가 this에 바인딩 됨 !
         console.log(this);
+        
+        this.color = color; //서브클래스의 생성자 추가
     }
 
     //메서드 오버라이딩
