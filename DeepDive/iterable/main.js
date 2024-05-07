@@ -1,9 +1,9 @@
 /**
- * 이터러블 (Iterable) : 반복 가능한 객체
- * 
- * ES6 이후 이터러블한 객체를 통일하여 
- * [for ... of문, 스프레드 문법, 배열 디스트럭처링 할당 대상]으로 사용할 수 있도록 일원화.
-
+* 이터러블 (Iterable) : 반복 가능한 객체
+* 
+* ES6 이후 이터러블한 객체를 통일하여 
+* [for ... of문, 스프레드 문법, 배열 디스트럭처링 할당 대상]으로 사용할 수 있도록 일원화.
+* => 데이터 공급자의 역할
 
 * Symbol.Iterator를 프로퍼티 키로 사용한 메서드를 직접 구현하거나 
 * 프로토타입 체인을 통해 상속받은 객체를 말함
@@ -75,9 +75,11 @@ console.log(iterator.next()); // {value: undefined, done: true}
 * String
 * Map
 * Set
-* TypedArray
+* TypedArray (Int8Array, Uint8Array, Uint8ClampedArray
+*             , Int16Array, Int32Array, Uint32Array
+*             , Float32Array, Float64Array)
 * arguments
-* DOM 컬렉션
+* DOM 컬렉션 (NodeList, HTMLCollection)
 
 */
 
@@ -101,4 +103,64 @@ for ( ;; ){
 
     const item = res.value;
     console.log(item);
+}
+
+/**
+ * 사용자 정의 이터러블
+ */
+
+//사용자 정의 이터러블 - 피보나치 수열
+const fibonacci = {
+    [Symbol.iterator](){
+        let [pre, cur] = [0, 1];
+        const max = 10;
+
+        //Symbol.iterator 메서드는 next() 소유
+        return{
+            next(){
+                [pre, cur] = [cur, pre + cur];
+
+                //이터레이터 객체 반환
+                return { value: cur, done: cur >= max };
+            }
+        }
+    }
+}
+
+//for ... of 문
+for(const num of fibonacci){
+    console.log(num);
+}
+
+//스프레드 문법
+const arr = [...fibonacci];
+console.log(arr);
+
+//배열 디스트럭처링
+const [first, second, ...restV] = fibonacci;
+console.log(first, second, restV);
+
+
+//max 인수를 받는 피보나치 수열 함수
+const fnFibonacci = function(max){
+    
+    let [pre, cur] = [0, 1];
+
+    //Symbol.iterator 메서드는 next() 소유
+    return{
+        [Symbol.iterator](){
+            return{
+                next(){
+                    [pre, cur] = [cur, pre + cur];
+    
+                    //이터레이터 객체 반환
+                    return { value: cur, done: cur >= max };
+                }
+            }
+        }    
+    }
+}
+
+for(const num of fnFibonacci(10)){
+    console.log(num);
 }
