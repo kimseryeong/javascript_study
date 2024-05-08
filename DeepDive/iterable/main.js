@@ -164,3 +164,4 @@ const fnFibonacci = function(max){
 for(const num of fnFibonacci(10)){
     console.log(num);
 }
+
